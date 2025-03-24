@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer Event Signup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Join Our Volunteer Event</h1>
+      <p>Sign up to volunteer for our community event and make a difference!</p>
+      <button id="openModal" class="cta-button">Sign Up</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="signupModal" class="modal">
+      <div class="modal-content">
+        <button id="closeModal" class="close">&times;</button>
+        <h2>Sign Up to Volunteer</h2>
+        <form id="signupForm">
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="John Doe"
+          />
+
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="you@example.com"
+          />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            placeholder="(123) 456-7890"
+            pattern="^\(\d{3}\) \d{3}-\d{4}$"
+          />
+
+          <label for="experience">Previous Volunteering Experience:</label>
+          <textarea
+            id="experience"
+            name="experience"
+            placeholder="Tell us about your past volunteer experiences..."
+          ></textarea>
+
+          <label for="date">Available Date:</label>
+          <input type="date" id="date" name="date" required />
+
+          <div id="form-errors" class="form-errors"></div>
+
+          <button type="submit" class="cta-button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="confirmationMessage" class="confirmation-message">
+      <p>Thank you for signing up! We will reach out to you shortly.</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
